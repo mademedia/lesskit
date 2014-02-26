@@ -1,21 +1,10 @@
-//  -------------------------------------------------------- //
-//  Lesskit
-//  -------------------------------------------------------- //
-
-.reset-type () when (@-lesskit-use-normalize = true) {
-    @import "reset/normalize.less";
-}
-.reset-type () when (@-lesskit-use-normalize = false) {
-  @import "reset/reset.less";
-}
-.reset-type();
-
+@import "reset/reset.less";
 @import "utilities/utilities.less";
-@import "base/base.less";
-@import "grids/grid.less";
-@import "media/media.less";
-@import "buttons/buttons.less";
-@import "forms/forms.less";
+@import "typography/typography.less";
+@import "font-stacks/sans-serif.less";
 @import "tables/tables.less";
+@import "buttons/buttons.less";
+@import "grids/grid.less";
 @import "units/units.less";
-@import "color/color.less";
+@import "forms/forms.less";
+@import "color-schemes/white.less";

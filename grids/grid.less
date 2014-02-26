@@ -1,43 +1,29 @@
-//  -------------------------------------------------------- //
-//  Grids
-//  -------------------------------------------------------- //
-
-@-lesskit-grid-columns: 12;
-@-lesskit-grid-column-width: 6.5%;
-@-lesskit-grid-gutter-width: 2%;
+@-lesskit-grid-columns: 16;
+@-lesskit-grid-column-width: 40px;
+@-lesskit-grid-gutter-width: 20px;
 
 .grid() {
-    .clearfix();
-    width: (@-lesskit-grid-columns * @-lesskit-grid-column-width) + ((@-lesskit-grid-columns - 1) * @-lesskit-grid-gutter-width);
+	width: (@-lesskit-grid-columns * @-lesskit-grid-column-width) + ((@-lesskit-grid-columns - 1) * @-lesskit-grid-gutter-width);
+	.clearfix();
 }
-
-.columns( @spanWidth ) {
-    .clearfix();
-    display: inline;
-    float: left;
-    width: (@-lesskit-grid-column-width * @spanWidth) + (@-lesskit-grid-gutter-width * (@spanWidth - 1));
-    margin-right: @-lesskit-grid-gutter-width;
-}
-
 .column( @spanWidth ) {
-    .columns( @spanWidth );
+	.columns( @spanWidth );
 }
-
+.columns( @spanWidth ) {
+	.clearfix();
+	display: inline;
+	float: left;
+	width: (@-lesskit-grid-column-width * @spanWidth) + (@-lesskit-grid-gutter-width * (@spanWidth - 1));
+	margin-right: @-lesskit-grid-gutter-width;
+}
 .last() {
-    margin-right: 0;
+	margin-right: 0;
 }
-
 .column-last( @spanWidth ) {
-    .columns( @spanWidth );
-    .last();
+	.columns( @spanWidth );
+	.last();
 }
-
-.reset-layout( @margin: 0 0 1em 0, @width: 100% ) {
-    clear: both;
-    float: none;
-    width: @width;
-    margin: @margin;
-}
-.clear-grid( @margin: 0 0 1em 0, @width: 100% ) {
-    .reset-layout( @margin, @width );
+.columns-last( @spanWidth ) {
+	.columns( @spanWidth );
+	.last();
 }
