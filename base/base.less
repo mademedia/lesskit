@@ -1,0 +1,86 @@
+/*  ========================================================================== */
+/*  @group Base */
+/*  ========================================================================== */
+
+    // Font sizes (unitless)
+    @-lesskit-font-size-unitless: 16;
+    @-lesskit-line-height-unitless: 1.5;
+    @-lesskit-heading-line-height-unitless: 1.2;
+
+    // Heading sizes (unitless)
+    @-lesskit-heading-size-1: 32;
+    @-lesskit-heading-size-2: 28;
+    @-lesskit-heading-size-3: 24;
+    @-lesskit-heading-size-4: 21;
+    @-lesskit-heading-size-5: 18;
+    @-lesskit-heading-size-6: 16;
+
+    // Auto-calculated font sizes/line heights
+    @-lesskit-font-size-px: @-lesskit-font-size-unitless * 1px;
+    @-lesskit-font-size-ems: 0.0001em * (round(@-lesskit-line-height-px / @-lesskit-font-size-px * 10000));
+    @-lesskit-font-size-pct: 100%*(@-lesskit-font-size-px/16px);
+    @-lesskit-line-height-px: @-lesskit-font-size-px * @-lesskit-line-height-unitless;
+    @-lesskit-line-height-ems: 0.0001em * (round(@-lesskit-line-height-px / @-lesskit-font-size-px * 10000));
+
+
+    // Display / Heading font-stack
+    @-lesskit-typography-display: Helmet, Freesans, sans-serif;
+
+    // Body font-stack
+    @-lesskit-typography-body: Helmet, Freesans, sans-serif;
+
+    // Caption / small-print font-stack
+    @-lesskit-typography-caption: sans-serif;
+
+    // Monospace
+    @-lesskit-typography-monospace: "Menlo", "Bitstream Vera Sans", Monaco, "Andale Mono", "Lucida Console", "Droid Mono", monospace;
+
+    html {
+        .font-size( @-lesskit-font-size-unitless );
+        line-height: @-lesskit-line-height-unitless;
+        overflow-y: scroll;
+        min-height: 100%;
+    }
+
+    html, body, button, input, select, textarea {
+        font-family: @-lesskit-typography-body;
+    }
+
+    h1, .h1, h2, .h2, h3, .h3,
+    h4, .h4, h5, .h5, h6, .h6 {
+        font-family: @-lesskit-typography-display;
+    }
+
+    pre, code, kbd, samp {
+        font-family: @-lesskit-typography-monospace;
+    }
+
+    hr {
+        padding: 0;
+        border: 0 none;
+        margin: (@-lesskit-line-height-ems/2) 0;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: @-lesskit-line-height-ems;
+    }
+
+    h1, .h1, h2, .h2, h3, .h3,
+    h4, .h4, h5, .h5, h6, .h6 {
+        font-weight: bold;
+        line-height: @-lesskit-heading-line-height-unitless;
+        margin-top: .75em;
+        margin-bottom: .5em;
+    }
+
+    h1, .h1 { .font-size( @-lesskit-heading-size-1 ); }
+    h2, .h2 { .font-size( @-lesskit-heading-size-2 ); }
+    h3, .h3 { .font-size( @-lesskit-heading-size-3 ); }
+    h4, .h4 { .font-size( @-lesskit-heading-size-4 ); }
+    h5, .h5 { .font-size( @-lesskit-heading-size-5 ); }
+    h6, .h5 { .font-size( @-lesskit-heading-size-6 ); }
+
+    blockquote {
+        margin: .5em 0;
+    }
