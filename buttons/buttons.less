@@ -1,56 +1,100 @@
+//  -------------------------------------------------------- //
+//  Buttons
+//  -------------------------------------------------------- //
 
-.btn(@buttonColor:#FFF, @buttonTextColor:@-lesskit-color-headers, @size:@-lesskit-font-size-px) {
-  // Button Base
-  cursor: pointer;
-  display: inline-block;
-  #gradient > .vertical(@buttonColor, darken(@buttonColor, 10%));
-  padding: 6px 14px 6px;
-vertical-align: bottom;
+// The button classes are best applied to links, buttons, and submit inputs.
+// These components can be used in forms, as calls to action, or as part of the
+// general UI of the site/app.
+//
+// Recommended use:
+//
+// <a class="Button [Button--modifier]" role="button" href="[url]">Button text</a>
+// <button class="Button [Button--modifier]" type="submit">Button text</button>
+// <input class="Button [Button--modifier]" type="submit" value="Button text">
 
-  color: @buttonTextColor;
-  line-height: normal;
-  border: 1px solid darken(@buttonColor, 15%);
-  border-bottom-color: darken(@buttonColor, 25%);
-  .border-radius(3px);
-  @shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 2px rgba(0,0,0,.05);
-  .box-shadow(@shadow);
+.btn( @buttonColor: @-lesskit-color-btn, @buttonTextColor: @-lesskit-color-btn-text, @size: @-lesskit-font-size-unitless ) {
 
-  &:hover {
+    cursor: pointer;
+    .border-box();
+    .inline-block();
+    .disable-user-select();
+    -webkit-appearance: none;
+
+    font: inherit;
+    .font-size-rems( @size );
     color: @buttonTextColor;
+    background-color: @buttonColor;
+
+    border: 0 none;
+    margin: 0;
+    height: 2em;
+    line-height: 2;
+    padding: 0 .75em;
+    position: relative;
+
+    text-align: center;
     text-decoration: none;
-	#gradient > .vertical(darken(@buttonColor,5%), darken(@buttonColor, 15%));
-  }
+    vertical-align: middle;
+    white-space: nowrap;
 
-  // Focus state for keyboard and accessibility
-  &:focus {
-    outline: 1px dotted #666;
-  }
+    &:visited {
+        color: @buttonTextColor;
+    }
 
-  &.disabled {
-    cursor: default;
-    background-image: none;
-    .reset-filter();
-    .box-shadow(none);
-  }
-  &[disabled] {
-    // disabled pseudo can't be included with .disabled
-    // def because IE8 and below will drop it ;_;
-    cursor: default;
-    background-image: none;
-    .reset-filter();
-    .box-shadow(none);
-  }
+    &:hover,
+    &:focus,
+    &:active {
+        color: @buttonTextColor;
+        background-color: darken( @buttonColor, 10% );
+        text-decoration: none;
+    }
+
+    // Focus state for keyboard and accessibility
+    &:focus {
+        outline: 1px dotted #666;
+    }
+
+    &.disabled {
+        cursor: default;
+        cursor: not-allowed;
+        background-image: none;
+        box-shadow: none;
+    }
+    &[disabled] {
+        // disabled pseudo can't be included with .disabled
+        // def because IE8 and below will drop it ;_;
+        cursor: default;
+        cursor: not-allowed;
+        box-shadow: none;
+    }
 
 }
 
-// Super jank hack for removing border-radius from IE9 so we can keep filter gradients on alerts and buttons
-:root .alert-message,
-:root .btn {
-  border-radius: 0 \0;
+.btn-unstyled( @size: @-lesskit-font-size-unitless, @color: @-lesskit-color-text ) {
+
+    color: @color;
+    background-color: transparent;
+    margin: 0;
+    text-decoration: none;
+    border: 0 none;
+    cursor: inherit;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: darken( @color, 10%);
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
 }
 
-// Help Firefox not be a jerk about adding extra padding to buttons
-button::-moz-focus-inner, input[type=submit]::-moz-focus-inner {
-	padding: 0;
-	border: 0;
+.hover-link() {
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
 }
