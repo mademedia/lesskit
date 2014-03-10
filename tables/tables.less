@@ -2,31 +2,31 @@
 //  Tables
 //  -------------------------------------------------------- //
 
-.table( @borderColor: @-lesskit-color-border, @padding: 0.5em ) {
+    .table( @borderColor: @-lesskit-color-border, @padding: 0.5em ) {
 
-    width: 100%;
-    padding: 0;
-    border-collapse: collapse; // Done so we can round those corners!
-    *border-collapse: collapse; /* IE7, collapse table to remove spacing */
-    border: 1px solid @borderColor;
-
-    caption {
-        text-align: left;
-    }
-
-    th, td {
-        padding: @padding;
-        text-align: left;
+        width: 100%;
+        padding: 0;
+        border-collapse: collapse; /* Done so we can round those corners! */
+        *border-collapse: collapse; /* IE7, collapse table to remove spacing */
         border: 1px solid @borderColor;
-    }
-    th {
-        padding-top: @padding;
-        font-weight: bold;
-        vertical-align: middle;
-        border-bottom: 1px solid @borderColor;
-    }
-    td {
-        vertical-align: top;
-    }
 
-}
+        caption {
+            text-align: left;
+        }
+
+        th, td {
+            padding: @padding;
+            text-align: left;
+            border: 1px solid @borderColor;
+        }
+        th {
+            padding-top: @padding;
+            font-weight: bold;
+            vertical-align: middle;
+            border-bottom: 1px solid @borderColor;
+        }
+        td {
+            vertical-align: top;
+        }
+
+    }
