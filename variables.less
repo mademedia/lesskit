@@ -1,0 +1,79 @@
+//  -------------------------------------------------------- //
+//  LESSKit Variables
+//  -------------------------------------------------------- //
+
+//  -------------------------------------------------------- //
+//  Color
+//  -------------------------------------------------------- //
+
+    @-lesskit-color-text: #585858;
+    @-lesskit-color-border: #bbb;
+    @-lesskit-color-headers: #222;
+    @-lesskit-color-mark: #FFEF95;
+    @-lesskit-color-link: #0075C9;
+    @-lesskit-color-link-hover: lighten(@-lesskit-color-link, 10%);
+    @-lesskit-color-link-active: lighten(@-lesskit-color-link, 10%);
+    @-lesskit-color-link-visited: darken(@-lesskit-color-link, 20%);
+
+    @-lesskit-color-text-alt: #EEE;
+    @-lesskit-color-headers-alt: #FFF;
+    @-lesskit-color-mark-alt: #FFEF95;
+    @-lesskit-color-link-alt: #A8D7FF;
+    @-lesskit-color-link-hover-alt: lighten(@-lesskit-color-link-alt, 10%);
+    @-lesskit-color-link-active-alt: lighten(@-lesskit-color-link-alt, 10%);
+    @-lesskit-color-link-visited-alt: darken(@-lesskit-color-link-alt, 20%);
+
+//  -------------------------------------------------------- //
+//  Typography
+//  -------------------------------------------------------- //
+
+    // Font sizes (unitless)
+    @-lesskit-font-size-unitless: 16;
+    @-lesskit-line-height-unitless: 1.5;
+    @-lesskit-heading-line-height-unitless: 1.2;
+
+    // Heading sizes (unitless)
+    @-lesskit-heading-size-1: 32;
+    @-lesskit-heading-size-2: 28;
+    @-lesskit-heading-size-3: 24;
+    @-lesskit-heading-size-4: 21;
+    @-lesskit-heading-size-5: 18;
+    @-lesskit-heading-size-6: 16;
+
+    // Auto-calculated font sizes/line heights
+    @-lesskit-font-size-px: @-lesskit-font-size-unitless * 1px;
+    @-lesskit-font-size-ems: 0.0001em * (round(@-lesskit-line-height-px / @-lesskit-font-size-px * 10000));
+    @-lesskit-font-size-pct: 100%*(@-lesskit-font-size-px/16px);
+    @-lesskit-line-height-px: @-lesskit-font-size-px * @-lesskit-line-height-unitless;
+    @-lesskit-line-height-ems: 0.0001em * (round(@-lesskit-line-height-px / @-lesskit-font-size-px * 10000));
+
+    // Display / Heading font-stack
+    @-lesskit-typography-display: Helmet, Freesans, sans-serif;
+
+    // Body font-stack
+    @-lesskit-typography-body: Helmet, Freesans, sans-serif;
+
+    // Caption / small-print font-stack
+    @-lesskit-typography-caption: sans-serif;
+
+    // Monospace
+    @-lesskit-typography-monospace: "Menlo", "Bitstream Vera Sans", Monaco, "Andale Mono", "Lucida Console", "Droid Mono", monospace;
+
+//  -------------------------------------------------------- //
+//  Grids
+//  -------------------------------------------------------- //
+
+    @-lesskit-grid-columns: 12;
+    @-lesskit-grid-column-width: 6.5%;
+    @-lesskit-grid-gutter-width: 2%;
+
+//  -------------------------------------------------------- //
+//  Breakpoints
+//  -------------------------------------------------------- //
+//  There are no common breakpoints so these are just a suggestion
+//  You'll need to define your own breakpoints to suit your design
+
+    @-lesskit-breakpoint-xlarge: 70em;
+    @-lesskit-breakpoint-large: 62.5em; // ~= 16px * 60 = 1000
+    @-lesskit-breakpoint-medium: 48em;
+    @-lesskit-breakpoint-small: 30em;

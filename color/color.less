@@ -1,0 +1,72 @@
+//  -------------------------------------------------------- //
+//  Color
+//  -------------------------------------------------------- //
+
+    body {
+        color: @-lesskit-color-text;
+    }
+
+    .lesskit-header-color( @color ) {
+        color: @color;
+        strong { color: lighten(@color,20%); }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        .lesskit-header-color( @-lesskit-color-headers );
+    }
+
+    a {
+        color: @-lesskit-color-link;
+        text-decoration: none;
+        line-height: inherit;
+        font-weight: inherit;
+        &:visited {
+            color: @-lesskit-color-link-visited;
+        }
+        &:active {
+            color: @-lesskit-color-link-active;
+        }
+        &:hover {
+            color: @-lesskit-color-link-hover;
+        }
+    }
+
+    mark {
+        background-color: @-lesskit-color-mark;
+        font-weight: normal;
+        font-style: normal;
+        padding: 2px 4px;
+        border-radius: 3px;
+    }
+
+    table {
+        .table( @-lesskit-color-border );
+    }
+
+//  -------------------------------------------------------- //
+//  Color - Flip colors
+//  -------------------------------------------------------- //
+
+    .flip-colors() {
+
+        color: @-lesskit-color-text-alt;
+
+        h1, h2, h3, h4, h5, h6 {
+            .lesskit-header-color(@-lesskit-color-headers-alt);
+            strong { color: darken(@-lesskit-color-headers-alt,10%); }
+        }
+
+        a {
+            color: @-lesskit-color-link-alt;
+            &:visited {
+                color: @-lesskit-color-link-visited-alt;
+            }
+            &:active {
+                color: @-lesskit-color-link-active-alt;
+            }
+            &:hover {
+                color: @-lesskit-color-link-hover-alt;
+            }
+        }
+
+    }

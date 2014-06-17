@@ -1,0 +1,53 @@
+/*  ========================================================================== */
+/*  @group Base */
+/*  ========================================================================== */
+
+    html {
+        .font-size( @-lesskit-font-size-unitless );
+        line-height: @-lesskit-line-height-unitless;
+        overflow-y: scroll;
+        min-height: 100%;
+    }
+
+    html, body, button, input, select, textarea {
+        font-family: @-lesskit-typography-body;
+    }
+
+    h1, .h1, h2, .h2, h3, .h3,
+    h4, .h4, h5, .h5, h6, .h6 {
+        font-family: @-lesskit-typography-display;
+    }
+
+    pre, code, kbd, samp {
+        font-family: @-lesskit-typography-monospace;
+    }
+
+    hr {
+        padding: 0;
+        border: 0 none;
+        margin: (@-lesskit-line-height-ems/2) 0;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: @-lesskit-line-height-ems;
+    }
+
+    h1, .h1, h2, .h2, h3, .h3,
+    h4, .h4, h5, .h5, h6, .h6 {
+        font-weight: bold;
+        line-height: @-lesskit-heading-line-height-unitless;
+        margin-top: .75em;
+        margin-bottom: .5em;
+    }
+
+    h1, .h1 { .font-size( @-lesskit-heading-size-1 ); }
+    h2, .h2 { .font-size( @-lesskit-heading-size-2 ); }
+    h3, .h3 { .font-size( @-lesskit-heading-size-3 ); }
+    h4, .h4 { .font-size( @-lesskit-heading-size-4 ); }
+    h5, .h5 { .font-size( @-lesskit-heading-size-5 ); }
+    h6, .h5 { .font-size( @-lesskit-heading-size-6 ); }
+
+    blockquote {
+        margin: .5em 0;
+    }

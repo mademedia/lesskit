@@ -1,4 +1,17 @@
-@import "reset/reset.less";
+//  -------------------------------------------------------- //
+//  LESSKit
+//  -------------------------------------------------------- //
+
+@import "variables.less";
+
+.reset-type () when (@-lesskit-use-normalize = true) {
+    @import "reset/normalize.less";
+}
+.reset-type () when (@-lesskit-use-normalize = false) {
+  @import "reset/reset.less";
+}
+.reset-type();
+
 @import "utilities/utilities.less";
 @import "typography/typography.less";
 @import "font-stacks/sans-serif.less";
@@ -6,5 +19,4 @@
 @import "buttons/buttons.less";
 @import "grids/grid.less";
 @import "units/units.less";
-@import "forms/forms.less";
-@import "color-schemes/white.less";
+@import "color/color.less";
