@@ -1,4 +1,4 @@
-# LESSKit
+# LESSKit v2.0.0
 
 LESSKit is a set of useful base-styles and LESS mixins.
 
@@ -123,16 +123,39 @@ Button mixins:
 
 ## Forms
 
-[@TODO: Document form styles]
+Basic form with the addition of:
+`.inputs-list` Stacked options for forms (radio buttons or checkboxes)
+`.stacked-form` Stacked version of basic form
 
 ## Tables
 
-[@TODO: Document table styles]
+Table mixins:
+
+* `.table( @borderColor: @-lesskit-color-border, @padding: 0.5em )` - Basic table styling
+
+Provided as a mixin so it can be used for content area tables only, e.g.,
+
+````
+.unit-page-content {
+    table {
+        .table();
+    }
+}
+````
 
 ## Units
 
-[@TODO: Document unit styles]
+Helper mixins for creating unit patterns:
+
+* `.list()` Clearfix a list
+* `.reset-list()` - Reset a list (no indent, no list style)
+* `.horizontal-menu()` - Create a basic horizontal menu
+* `.nested-menu()` - Create a basic nested menu
 
 ## Colour
 
-[@TODO: Document colour styles]
+Sets page level colours on body, headings and links based on the colours set in the variables.
+
+Colour mixins:
+
+* `.flip-colors()` - Reverse out body, headings and links based on the colours set in the variables.
