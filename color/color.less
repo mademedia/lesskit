@@ -47,26 +47,48 @@
 //  Color - Flip colors
 //  -------------------------------------------------------- //
 
+    .default-colors() {
+
+        color: @-lesskit-color-text;
+
+        h1, h2, h3, h4, h5, h6 {
+            .lesskit-header-color(@-lesskit-color-headers);
+        }
+
+        a, a:link {
+            color: @-lesskit-color-link;
+        }
+        a:visited {
+            color: @-lesskit-color-link-visited;
+        }
+        a:hover {
+            color: @-lesskit-color-link-hover;
+        }
+        a:active {
+            color: @-lesskit-color-link-active;
+        }
+
+    }
+
     .flip-colors() {
 
         color: @-lesskit-color-text-alt;
 
         h1, h2, h3, h4, h5, h6 {
-            .lesskit-header-color(@-lesskit-color-headers-alt);
-            strong { color: darken(@-lesskit-color-headers-alt,10%); }
+            .lesskit-header-color( @-lesskit-color-headers-alt );
         }
 
-        a {
+        a, a:link {
             color: @-lesskit-color-link-alt;
-            &:visited {
-                color: @-lesskit-color-link-visited-alt;
-            }
-            &:active {
-                color: @-lesskit-color-link-active-alt;
-            }
-            &:hover {
-                color: @-lesskit-color-link-hover-alt;
-            }
+        }
+        a:visited {
+            color: @-lesskit-color-link-visited-alt;
+        }
+        a:hover {
+            color: @-lesskit-color-link-hover-alt;
+        }
+        a:active {
+            color: @-lesskit-color-link-active-alt;
         }
 
     }
