@@ -54,25 +54,6 @@
     }
 
 //  -------------------------------------------------------- //
-//  Floats
-//  -------------------------------------------------------- //
-
-    .float(@position: left) {
-        display: inline;
-        float: @position;
-    }
-    .float-left() {
-        .float(left);
-    }
-    .float-right() {
-        .float(right);
-    }
-    .reset-float(@display: block) {
-        float: none;
-        display: $display;
-    }
-
-//  -------------------------------------------------------- //
 //  Min Height
 //  -------------------------------------------------------- //
 
@@ -90,14 +71,6 @@
         width: auto !important;
         width: @value;
         min-width: @value;
-    }
-
-    .inline-block( @align: top ) {
-        display: -moz-inline-stack;
-        display: inline-block;
-        vertical-align: @align;
-        zoom: 1;
-        *display: inline;
     }
 
 //  -------------------------------------------------------- //
@@ -122,7 +95,6 @@
         &:after {
             clear: both;
         }
-        *zoom: 1;
     }
 
 //  -------------------------------------------------------- //
@@ -139,7 +111,6 @@
         background-repeat: no-repeat;
         text-align: left;
         direction: ltr;
-        *line-height: 0;
         br {
             display: none;
         }

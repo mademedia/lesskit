@@ -9,7 +9,6 @@
 
     .columns( @spanWidth ) {
         .clearfix();
-        display: inline;
         float: left;
         width: (@-lesskit-grid-column-width * @spanWidth) + (@-lesskit-grid-gutter-width * (@spanWidth - 1));
         margin-right: @-lesskit-grid-gutter-width;
@@ -34,6 +33,7 @@
         width: @width;
         margin: @margin;
     }
+
     .clear-grid( @margin: 0 0 1em 0, @width: 100% ) {
         .reset-layout( @margin, @width );
     }
