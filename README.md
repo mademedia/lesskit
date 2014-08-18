@@ -1,6 +1,6 @@
 # LESSKit v2.5.0
 
-LESSKit set of handy LESS mixins
+LESSKit is a set of handy LESS mixins
 
 ## Core variables
 
